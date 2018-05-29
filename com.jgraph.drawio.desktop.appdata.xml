@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
   <id>com.jgraph.drawio.desktop</id>
+  <launchable type="desktop-id">com.jgraph.drawio.desktop.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>Apache-2.0</project_license>
   <name>draw.io desktop</name>
