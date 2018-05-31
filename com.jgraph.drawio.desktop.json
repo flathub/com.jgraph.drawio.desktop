@@ -1,6 +1,5 @@
 {
   "app-id": "com.jgraph.drawio.desktop",
-  "branch": "stable",
   "base": "io.atom.electron.BaseApp",
   "base-version": "stable",
   "runtime": "org.freedesktop.Platform",
