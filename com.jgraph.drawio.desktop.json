@@ -35,8 +35,8 @@
         {
           "type": "file",
           "only-arches": ["x86_64"],
-          "url": "https://github.com/jgraph/drawio-desktop/releases/download/v8.6.5/draw.io-amd64-8.6.5.deb",
-          "sha256": "0f9f522a43049241646fab61b85d36ebbf35e4d0e380e033780931882773a0d2"
+          "url": "https://github.com/jgraph/drawio-desktop/releases/download/v8.8.0/draw.io-amd64-8.8.0.deb",
+          "sha256": "07a136019ba449c906142eeeedb402199002d52a78e2f62f7b27f80fc56b847e"
         },
         {
           "type": "script",
@@ -52,7 +52,7 @@
         {
           "type": "git",
           "url": "https://github.com/jgraph/drawio-desktop",
-          "commit": "70484e6a6ea7ac5a4840f0df579bf327ec400aac"
+          "commit": "f41772dbb7eb91e76bc03a6971ece0d710a741c8"
         }
       ]
     }
