@@ -8,51 +8,76 @@
   "command": "draw.io",
   "separate-locales": false,
   "finish-args": [
-    "--device=dri",
-    "--filesystem=home",
     "--share=ipc",
-    "--share=network",
+    "--socket=x11",
     "--socket=pulseaudio",
-    "--socket=x11"
+    "--share=network",
+    "--filesystem=home"
   ],
+  "build-options" : {
+    "cflags": "-O2 -g",
+    "cxxflags": "-O2 -g",
+    "env": {
+      "NPM_CONFIG_LOGLEVEL": "info"
+    }
+  },
   "modules": [
     {
-      "name": "draw.io",
-      "buildsystem": "simple",
-      "build-commands": [
-        "ar -x draw.io-*.deb",
-        "rm -f draw.io-*.deb",
-        "tar -xf data.tar.xz",
-        "cp -r opt/* /app",
-        "install -Dm755 draw.io.sh /app/bin/draw.io",
-        "install -Dm644 usr/share/applications/draw.io.desktop /app/share/applications/com.jgraph.drawio.desktop.desktop",
-        "install -Dm644 usr/share/icons/hicolor/0x0/apps/draw.io.png /app/share/icons/hicolor/512x512/apps/com.jgraph.drawio.desktop.png",
-        "desktop-file-edit --set-key=Exec --set-value='draw.io %U' /app/share/applications/com.jgraph.drawio.desktop.desktop",
-        "desktop-file-edit --set-key=Icon --set-value='com.jgraph.drawio.desktop' /app/share/applications/com.jgraph.drawio.desktop.desktop",
-        "install -Dm644 com.jgraph.drawio.desktop.appdata.xml /app/share/metainfo/com.jgraph.drawio.desktop.appdata.xml"
+      "name": "nodejs",
+      "cleanup": [
+        "/include",
+        "/share",
+        "/app/lib/node_modules/npm/changelogs",
+        "/app/lib/node_modules/npm/doc",
+        "/app/lib/node_modules/npm/html",
+        "/app/lib/node_modules/npm/man",
+        "/app/lib/node_modules/npm/scripts"
       ],
       "sources": [
         {
-          "type": "file",
-          "only-arches": ["x86_64"],
-          "url": "https://github.com/jgraph/drawio-desktop/releases/download/v8.8.0/draw.io-amd64-8.8.0.deb",
-          "sha256": "07a136019ba449c906142eeeedb402199002d52a78e2f62f7b27f80fc56b847e"
+          "type": "archive",
+          "url": "https://nodejs.org/dist/v8.11.2/node-v8.11.2.tar.xz",
+          "sha256": "539946c0381809576bed07424a35fc1740d52f4bd56305d6278d9e76c88f4979"
+        }
+      ]
+    },
+    {
+      "name": "draw.io",
+      "build-options" : {
+        "env": {
+          "electron_config_cache": "/run/build/draw.io/npm-cache"
+        }
+      },
+      "buildsystem": "simple",
+      "build-commands": [
+        "npm install --prefix=main --offline --cache=/run/build/draw.io/npm-cache/",
+        "mkdir -p /app/main /app/bin",
+        "cp -ra main/* /app/main/",
+        "install -Dm644 main/build/icon.png /app/share/icons/hicolor/1024x1024/apps/com.jgraph.drawio.desktop.png",
+        "install -Dm644 -t /app/share/applications com.jgraph.drawio.desktop.desktop",
+        "install -Dm644 -t /app/share/metainfo com.jgraph.drawio.desktop.appdata.xml",
+        "install -Dm755 run.sh /app/bin/draw.io"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/jgraph/drawio-desktop",
+          "commit": "f41772dbb7eb91e76bc03a6971ece0d710a741c8",
+          "dest": "main"
         },
+        "generated-sources.json",
         {
           "type": "script",
-          "dest-filename": "draw.io.sh",
-          "commands": [
-            "exec env TMPDIR=$XDG_CACHE_HOME /app/draw.io/draw.io \"$@\""
-          ]
+          "dest-filename": "run.sh",
+          "commands": [ "npm start --prefix=/app/main" ]
         },
         {
           "type": "file",
           "path": "com.jgraph.drawio.desktop.appdata.xml"
         },
         {
-          "type": "git",
-          "url": "https://github.com/jgraph/drawio-desktop",
-          "commit": "f41772dbb7eb91e76bc03a6971ece0d710a741c8"
+          "type": "file",
+          "path": "com.jgraph.drawio.desktop.desktop"
         }
       ]
     }

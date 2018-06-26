@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=draw.io
+Comment=draw.io desktop
+Icon=com.jgraph.drawio.desktop
+Exec=draw.io %U
+Terminal=false
+Categories=Graphics;
