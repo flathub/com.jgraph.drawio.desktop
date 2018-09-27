@@ -6,11 +6,11 @@
   <project_license>Apache-2.0</project_license>
   <name>draw.io desktop</name>
   <summary>draw.io is an open platform to create and share diagrams.</summary>
-  <summary xml:lang="pt_BR">Draw.Io é uma plataforma aberta para criar e compartilhar diagramas.</summary>
-  <summary xml:lang="es">Draw.IO es una plataforma abierta para crear y compartir diagramas.</summary>
+  <summary xml:lang="pt_BR">draw.io é uma plataforma aberta para criar e compartilhar diagramas.</summary>
+  <summary xml:lang="es">draw.io es una plataforma abierta para crear y compartir diagramas.</summary>
   <description><p>draw.io is the most flexible and privacy-focused of any production grade diagramming tool. Create flowcharts, process diagrams, org charts, UML, ER diagrams, network diagrams and much more.</p></description>
-  <description xml:lang="pt_BR"><p>Draw.Io é o mais flexível e focado em privacidade de qualquer ferramenta de diagramação de classe de produção. Criar fluxogramas, diagramas de processos, organogramas, UML, diagramas de ER, diagramas de rede e muito mais.</p></description>
-  <description xml:lang="es"><p>Draw.IO es la más flexible y enfocada en la privacidad de cualquier herramienta de diagramación de grado de producción. Crear organigramas, diagramas de procesos, organigramas, UML, diagramas de ER, diagramas de red y mucho más.</p></description>
+  <description xml:lang="pt_BR"><p>draw.io é o mais flexível e focado em privacidade de qualquer ferramenta de diagramação de classe de produção. Criar fluxogramas, diagramas de processos, organogramas, UML, diagramas de ER, diagramas de rede e muito mais.</p></description>
+  <description xml:lang="es"><p>draw.io es la más flexible y enfocada en la privacidad de cualquier herramienta de diagramación de grado de producción. Crear organigramas, diagramas de procesos, organigramas, UML, diagramas de ER, diagramas de red y mucho más.</p></description>
   <screenshots>
     <screenshot type="default">
       <image>https://about.draw.io/wp-content/uploads/2018/06/drawio-Floorplan-1840x900.png</image>
