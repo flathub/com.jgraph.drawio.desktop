@@ -5,10 +5,9 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>Apache-2.0</project_license>
   <name>draw.io desktop</name>
-  <summary>draw.io is an open platform to create and share diagrams.</summary>
-  <summary>draw.io is an open platform to create and share diagrams.</summary>
-  <summary xml:lang="pt_BR">draw.io é uma plataforma aberta para criar e compartilhar diagramas.</summary>
-  <summary xml:lang="es">draw.io es una plataforma abierta para crear y compartir diagramas.</summary>
+  <summary>Create and share diagrams</summary>
+  <summary xml:lang="pt_BR">Crie e compartilhe diagramas</summary>
+  <summary xml:lang="es">Crea y comparte diagramas.</summary>
   <description><p>draw.io is the most flexible and privacy-focused of any production grade diagramming tool. Create flowcharts, process diagrams, org charts, UML, ER diagrams, network diagrams and much more.</p></description>
   <description xml:lang="pt_BR"><p>draw.io é o mais flexível e focado em privacidade de qualquer ferramenta de diagramação de classe de produção. Criar fluxogramas, diagramas de processos, organogramas, UML, diagramas de ER, diagramas de rede e muito mais.</p></description>
   <description xml:lang="es"><p>draw.io es la más flexible y enfocada en la privacidad de cualquier herramienta de diagramación de grado de producción. Crear organigramas, diagramas de procesos, organigramas, UML, diagramas de ER, diagramas de red y mucho más.</p></description>
