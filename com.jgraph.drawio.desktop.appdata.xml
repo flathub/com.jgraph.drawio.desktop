@@ -6,13 +6,11 @@
   <project_license>Apache-2.0</project_license>
   <name>draw.io desktop</name>
   <summary>Create and share diagrams</summary>
-  <description>
-    <p>
-      draw.io is the most flexible and privacy-focused of any production
-      grade diagramming tool. Create flowcharts, process diagrams, org
-      charts, UML, ER diagrams, network diagrams and much more.
-    </p>
-  </description>
+  <summary xml:lang="pt_BR">Crie e compartilhe diagramas</summary>
+  <summary xml:lang="es">Crea y comparte diagramas.</summary>
+  <description><p>draw.io is the most flexible and privacy-focused of any production grade diagramming tool. Create flowcharts, process diagrams, org charts, UML, ER diagrams, network diagrams and much more.</p></description>
+  <description xml:lang="pt_BR"><p>draw.io é o mais flexível e focado em privacidade de qualquer ferramenta de diagramação de classe de produção. Criar fluxogramas, diagramas de processos, organogramas, UML, diagramas de ER, diagramas de rede e muito mais.</p></description>
+  <description xml:lang="es"><p>draw.io es la más flexible y enfocada en la privacidad de cualquier herramienta de diagramación de grado de producción. Crear organigramas, diagramas de procesos, organigramas, UML, diagramas de ER, diagramas de red y mucho más.</p></description>
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/jgraph/drawio-desktop/master/screenshot.png</image>
