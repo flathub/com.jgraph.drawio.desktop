@@ -45,7 +45,6 @@ modules:
       - install -Dm644 -t /app/share/metainfo com.jgraph.drawio.desktop.appdata.xml
       - install -Dm644 -t /app/share/applications com.jgraph.drawio.desktop.desktop
     sources:
-      - generated-sources.json
       - type: git
         url: https://github.com/jgraph/drawio-desktop
         commit: f41772dbb7eb91e76bc03a6971ece0d710a741c8
@@ -58,3 +57,4 @@ modules:
         path: com.jgraph.drawio.desktop.appdata.xml
       - type: file
         path: com.jgraph.drawio.desktop.desktop
+      - generated-sources.json
