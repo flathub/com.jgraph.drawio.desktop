@@ -59,10 +59,10 @@ modules:
       - npm install --prefix=main --offline --cache=/run/build/drawio/npm-cache
       - mkdir -p /app/main
       - cp -ra main/* /app/main
-      - install -Dm644 main/build/icon.png /app/share/icons/hicolor/512x512/apps/com.jgraph.drawio.desktop.png
       - install -Dm755 run.sh /app/bin/drawio
       - install -Dm644 -t /app/share/metainfo com.jgraph.drawio.desktop.appdata.xml
       - install -Dm644 -t /app/share/applications com.jgraph.drawio.desktop.desktop
+      - install -Dm644 -t /app/share/icons/hicolor/512x512/apps com.jgraph.drawio.desktop.png
     sources:
       - generated-sources.json
       - type: git
@@ -77,3 +77,5 @@ modules:
         path: com.jgraph.drawio.desktop.appdata.xml
       - type: file
         path: com.jgraph.drawio.desktop.desktop
+      - type: file
+        path: com.jgraph.drawio.desktop.png
