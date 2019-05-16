@@ -4,7 +4,7 @@ base-version: '18.08'
 runtime: org.freedesktop.Platform
 runtime-version: '18.08'
 sdk: org.freedesktop.Sdk
-command: drawio
+command: run.sh
 separate-locales: false
 finish-args:
   - --share=ipc
@@ -38,10 +38,10 @@ modules:
         electron_config_cache: /run/build/drawio/npm-cache
     build-commands:
       - npm install --prefix=main --offline --cache=/run/build/drawio/npm-cache
-      - mkdir -p /app/main /app/bin
+      - mkdir -p /app/main
       - cp -ra main/* /app/main
       - install -Dm644 main/build/icon.png /app/share/icons/hicolor/512x512/apps/com.jgraph.drawio.desktop.png
-      - install -Dm755 run.sh /app/bin/drawio
+      - install -Dm755 -t /app/bin run.sh
       - install -Dm644 -t /app/share/metainfo com.jgraph.drawio.desktop.appdata.xml
       - install -Dm644 -t /app/share/applications com.jgraph.drawio.desktop.desktop
     sources:
