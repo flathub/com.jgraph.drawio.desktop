@@ -38,6 +38,13 @@ modules:
       - 'yarn --offline'
       - 'yarn run --offline release --dir'
       - 'cp -r dist/linux-unpacked $FLATPAK_DEST/drawio-desktop'
+      - 'install -D -m 644 build/icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg'
+      - 'icon_in=build/icon.svg;
+        icon_out=$FLATPAK_ID.png;
+        for size in {16,32,48,64,96,128,256,512}; do
+        rsvg-convert $icon_in -w $size -h $size -a -f png -o $icon_out;
+        install -D -m 644 -t $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps $icon_out;
+        done;'
       - 'install -D -m 755 start-drawio-desktop.sh $FLATPAK_DEST/bin/start-drawio-desktop'
       - 'install -D -m 644 -t $FLATPAK_DEST/share/metainfo $FLATPAK_ID.appdata.xml'
       - 'install -D -m 644 -t $FLATPAK_DEST/share/applications $FLATPAK_ID.desktop'
