@@ -40,7 +40,16 @@
   <developer_name>JGraph</developer_name>
   <update_contact>support@draw.io</update_contact>
   <releases>
-    <release version="11.1.1" date="2019-08-03"/>
+    <release version="11.1.1" date="2019-08-03">
+      <description>
+        <ul>
+          <li>Updates to draw.io 11.1.1, changes from 10.9.5 to 11.1.1 are new in this desktop release</li>
+          <li>Adds .vsdx export to command line options</li>
+          <li>Defaults to dark theme if MacOS is in dark mode</li>
+          <li>Updates to Electron 6</li>
+        </ul>
+      </description>
+    </release>
   </releases>
   <content_rating type="oars-1.1"/>
 </component>
