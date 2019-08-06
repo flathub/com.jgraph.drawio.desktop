@@ -1,81 +1,63 @@
 app-id: com.jgraph.drawio.desktop
-base: org.electronjs.Electron2.BaseApp
-base-version: '18.08'
+branch: stable
 runtime: org.freedesktop.Platform
 runtime-version: '18.08'
 sdk: org.freedesktop.Sdk
-command: drawio
+base: org.electronjs.Electron2.BaseApp
+base-version: '18.08'
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.node10
 separate-locales: false
+command: start-drawio-desktop
 finish-args:
-  - --share=ipc
-  - --socket=x11
-  - --socket=pulseaudio
-  - --share=network
-  - --filesystem=home
-build-options:
-  cflags: -O2 -g
-  cxxflags: -O2 -g
-  env:
-    NPM_CONFIG_LOGLEVEL: info
+  - '--share=ipc'
+  - '--socket=x11'
+  - '--share=network'
+  - '--filesystem=home'
 modules:
-  - name: python-2.7
-    sources:
-      - type: archive
-        url: https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz
-        sha256: 01da813a3600876f03f46db11cc5c408175e99f03af2ba942ef324389a83bad5
-    config-opts:
-      - --enable-shared
-      - --with-ensurepip=yes
-      - --with-system-expat
-      - --with-system-ffi
-      - --enable-loadable-sqlite-extensions
-      - --with-dbmliborder=gdbm
-      - --enable-unicode=ucs4
-    post-install:
-      - chmod 644 /app/lib/libpython2.7.so.1.0
+  - name: yarn
+    buildsystem: simple
+    build-commands:
+      - 'cp -a * /app'
     cleanup:
       - '*'
-
-  - name: nodejs
-    cleanup: 
-      - /include
-      - /share
-      - /app/lib/node_modules/npm/changelogs
-      - /app/lib/node_modules/npm/doc
-      - /app/lib/node_modules/npm/html
-      - /app/lib/node_modules/npm/man
-      - /app/lib/node_modules/npm/scripts
     sources:
       - type: archive
-        url: https://nodejs.org/dist/v8.16.0/node-v8.16.0.tar.xz
-        sha256: 3515e8e01568a5dc4dff3d91a76ebc6724f5fa2fbb58b4b0c5da7b178a2f7340
+        url: https://github.com/yarnpkg/yarn/releases/download/v1.17.3/yarn-v1.17.3.tar.gz
+        sha256: e3835194409f1b3afa1c62ca82f561f1c29d26580c9e220c36866317e043c6f3
 
-  - name: drawio
+  - name: drawio-desktop
     buildsystem: simple
     build-options:
+      append-path: '/usr/lib/sdk/node10/bin:/app/yarn/bin'
       env:
-        electron_config_cache: /run/build/drawio/npm-cache
+        ELECTRON_CACHE: '/run/build/drawio-desktop/flatpak-node/electron-cache'
+        npm_config_nodedir: '/usr/lib/sdk/node10'
     build-commands:
-      - npm install --prefix=main --offline --cache=/run/build/drawio/npm-cache
-      - mkdir -p /app/main
-      - cp -ra main/* /app/main
-      - install -Dm755 run.sh /app/bin/drawio
-      - install -Dm644 -t /app/share/metainfo com.jgraph.drawio.desktop.appdata.xml
-      - install -Dm644 -t /app/share/applications com.jgraph.drawio.desktop.desktop
-      - install -Dm644 -t /app/share/icons/hicolor/512x512/apps com.jgraph.drawio.desktop.png
+      - 'HOME=$PWD yarn config --offline set yarn-offline-mirror $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror'
+      - 'yarn --offline'
+      - 'yarn run --offline release --dir'
+      - 'cp -r dist/linux*-unpacked $FLATPAK_DEST/drawio-desktop'
+      - 'install -D -m 644 build/icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg'
+      - 'icon_in=build/icon.svg;
+        icon_out=$FLATPAK_ID.png;
+        for size in {16,32,48,64,96,128,256,512}; do
+        rsvg-convert $icon_in -w $size -h $size -a -f png -o $icon_out;
+        install -D -m 644 -t $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps $icon_out;
+        done;'
+      - 'install -D -m 755 start-drawio-desktop.sh $FLATPAK_DEST/bin/start-drawio-desktop'
+      - 'install -D -m 644 -t $FLATPAK_DEST/share/metainfo $FLATPAK_ID.appdata.xml'
+      - 'install -D -m 644 -t $FLATPAK_DEST/share/applications $FLATPAK_ID.desktop'
     sources:
-      - generated-sources.json
       - type: git
         url: https://github.com/jgraph/drawio-desktop
-        commit: f41772dbb7eb91e76bc03a6971ece0d710a741c8
-        dest: main
+        commit: 25e3972aae192378b35872bcc1c1ea24e6119aa3
+      - yarn-dependencies.json
       - type: script
-        dest-filename: run.sh
+        dest-filename: start-drawio-desktop.sh
         commands:
-          - npm start --prefix=/app/main
+          - '/app/drawio-desktop/draw.io --no-sandbox'
       - type: file
         path: com.jgraph.drawio.desktop.appdata.xml
       - type: file
         path: com.jgraph.drawio.desktop.desktop
-      - type: file
-        path: com.jgraph.drawio.desktop.png
