@@ -37,7 +37,7 @@ modules:
       - 'HOME=$PWD yarn config --offline set yarn-offline-mirror $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror'
       - 'yarn --offline'
       - 'yarn run --offline release --dir'
-      - 'cp -r dist/linux-unpacked $FLATPAK_DEST/drawio-desktop'
+      - 'cp -r dist/linux*-unpacked $FLATPAK_DEST/drawio-desktop'
       - 'install -D -m 644 build/icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg'
       - 'icon_in=build/icon.svg;
         icon_out=$FLATPAK_ID.png;
