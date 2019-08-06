@@ -4,6 +4,6 @@ Version=1.1
 Name=draw.io desktop
 Comment=Official electron build of draw.io
 Icon=com.jgraph.drawio.desktop
-Exec=drawio %U
+Exec=start-drawio-desktop
 Terminal=false
 Categories=Graphics;
