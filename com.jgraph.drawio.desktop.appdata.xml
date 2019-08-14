@@ -43,11 +43,11 @@
     <release version="11.1.4" date="2019-08-09">
       <description>
         <ul>
-          <li>Updates to draw.io 11.1.4, changes from 11.1.1 to 11.1.4 are new in this desktop release.</li>
-          <li>Publishes snap to snapstore.</li>
-          <li>Changes Linux executable name from draw.io to drawio (snap didn't like it).</li>
-          <li>Fixes bug with exporting PNGs with embedded XML using extended unicode.</li>
-          <li>Adds export with grid option.</li>
+          <li>Updates to draw.io 11.1.4, changes from 11.1.1 to 11.1.4 are new in this desktop release</li>
+          <li>Publishes snap to snapstore</li>
+          <li>Changes Linux executable name from draw.io to drawio (snap didn't like it)</li>
+          <li>Fixes bug with exporting PNGs with embedded XML using extended unicode</li>
+          <li>Adds export with grid option</li>
         </ul>
       </description>
     </release>
