@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018-2019 Flathub maintainers -->
 <component type="desktop">
   <id>com.jgraph.drawio.desktop</id>
   <launchable type="desktop-id">com.jgraph.drawio.desktop.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>Apache-2.0</project_license>
-  <name>draw.io desktop</name>
+  <name>draw.io</name>
   <summary>Create and share diagrams</summary>
   <summary xml:lang="es">Crea y comparte diagramas</summary>
   <summary xml:lang="pt_BR">Crie e compartilhe diagramas</summary>
@@ -31,6 +32,9 @@
       de rede e muito mais.
     </p>
   </description>
+  <categories>
+    <category>Graphics</category>
+  </categories>
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/jgraph/drawio-desktop/master/screenshot.png</image>
@@ -40,13 +44,14 @@
   <developer_name>JGraph</developer_name>
   <update_contact>support@draw.io</update_contact>
   <releases>
-    <release version="11.1.1" date="2019-08-03">
+    <release version="11.1.4" date="2019-08-09">
       <description>
         <ul>
-          <li>Updates to draw.io 11.1.1, changes from 10.9.5 to 11.1.1 are new in this desktop release</li>
-          <li>Adds .vsdx export to command line options</li>
-          <li>Defaults to dark theme if MacOS is in dark mode</li>
-          <li>Updates to Electron 6</li>
+          <li>Updates to draw.io 11.1.4, changes from 11.1.1 to 11.1.4 are new in this desktop release</li>
+          <li>Publishes snap to snapstore</li>
+          <li>Changes Linux executable name from draw.io to drawio (snap didn't like it)</li>
+          <li>Fixes bug with exporting PNGs with embedded XML using extended unicode</li>
+          <li>Adds export with grid option</li>
         </ul>
       </description>
     </release>
