@@ -1,8 +1,8 @@
 [Desktop Entry]
 Type=Application
 Version=1.1
-Name=draw.io desktop
-Comment=Official electron build of draw.io
+Name=draw.io
+Comment=draw.io desktop
 Icon=com.jgraph.drawio.desktop
 Exec=start-drawio-desktop
 Terminal=false
