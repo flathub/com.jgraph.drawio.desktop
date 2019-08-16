@@ -56,7 +56,7 @@ modules:
       - type: script
         dest-filename: start-drawio-desktop.sh
         commands:
-          - '/app/drawio-desktop/draw.io --no-sandbox'
+          - '/app/drawio-desktop/drawio --no-sandbox'
       - type: file
         path: com.jgraph.drawio.desktop.appdata.xml
       - type: file
