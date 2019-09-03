@@ -52,7 +52,7 @@ modules:
       - type: git
         url: https://github.com/jgraph/drawio-desktop
         commit: 37e333ff4177f61019b8334c079d9c1f19afb692
-      - yarn-dependencies.json
+      - generated-sources.json
       - type: script
         dest-filename: start-drawio-desktop.sh
         commands:
