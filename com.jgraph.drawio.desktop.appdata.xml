@@ -44,14 +44,15 @@
   <developer_name>JGraph</developer_name>
   <update_contact>support@draw.io</update_contact>
   <releases>
-    <release version="11.1.4" date="2019-08-09">
+    <release version="11.2.4" date="2019-09-03">
       <description>
         <ul>
-          <li>Updates to draw.io 11.1.4, changes from 11.1.1 to 11.1.4 are new in this desktop release</li>
-          <li>Publishes snap to snapstore</li>
-          <li>Changes Linux executable name from draw.io to drawio (snap didn't like it)</li>
-          <li>Fixes bug with exporting PNGs with embedded XML using extended unicode</li>
-          <li>Adds export with grid option</li>
+          <li>Updates to draw.io 11.2.4, changes from 11.1.4 to 11.2.4 are new in this desktop release.</li>
+          <li>Fixes arrow alignment issue when zoomed.</li>
+          <li>Updates AWS icons.</li>
+          <li>Adds ruler and units (view->ruler).</li>
+          <li>Fixes crash after print (fix in Electron 6.0.2+)</li>
+          <li>MacOS no longer defaults to dark mode if OS is in dark mode.</li>
         </ul>
       </description>
     </release>
