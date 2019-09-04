@@ -44,15 +44,10 @@
   <developer_name>JGraph</developer_name>
   <update_contact>support@draw.io</update_contact>
   <releases>
-    <release version="11.2.4" date="2019-09-03">
+    <release version="11.2.5" date="2019-09-03">
       <description>
         <ul>
-          <li>Updates to draw.io 11.2.4, changes from 11.1.4 to 11.2.4 are new in this desktop release.</li>
-          <li>Fixes arrow alignment issue when zoomed.</li>
-          <li>Updates AWS icons.</li>
-          <li>Adds ruler and units (view->ruler).</li>
-          <li>Fixes crash after print (fix in Electron 6.0.2+)</li>
-          <li>MacOS no longer defaults to dark mode if OS is in dark mode.</li>
+          <li>Patch release for checksum error when updating Windows desktop in-place</li>
         </ul>
       </description>
     </release>
