@@ -44,10 +44,12 @@
   <developer_name>JGraph</developer_name>
   <update_contact>support@draw.io</update_contact>
   <releases>
-    <release version="11.2.5" date="2019-09-03">
+    <release version="11.3.0" date="2019-09-20">
       <description>
         <ul>
-          <li>Patch release for checksum error when updating Windows desktop in-place</li>
+          <li>Updates to draw.io 11.3.0, changes from 11.2.4 to 11.3.0 are new in this desktop release</li>
+          <li>Updates MSCAE and GCP stencils</li>
+          <li>Enables ruler by default</li>
         </ul>
       </description>
     </release>
