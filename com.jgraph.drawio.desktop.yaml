@@ -1,10 +1,10 @@
 app-id: com.jgraph.drawio.desktop
 branch: stable
 runtime: org.freedesktop.Platform
-runtime-version: '18.08'
+runtime-version: '19.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '18.08'
+base-version: '19.08'
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node10
 separate-locales: false
