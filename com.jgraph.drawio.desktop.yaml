@@ -51,7 +51,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/jgraph/drawio-desktop
-        commit: d890061970bf2f6939eabd59b2b0d58a881d3e43
+        commit: 5ec520bd52298c1461d2e246020e1092034769dc
       - generated-sources.json
       - type: script
         dest-filename: start-drawio-desktop.sh
