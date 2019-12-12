@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Copyright 2018-2019 Flathub maintainers -->
 <component type="desktop">
   <id>com.jgraph.drawio.desktop</id>
@@ -44,15 +44,7 @@
   <developer_name>JGraph</developer_name>
   <update_contact>support@draw.io</update_contact>
   <releases>
-    <release version="11.3.0" date="2019-09-20">
-      <description>
-        <ul>
-          <li>Updates to draw.io 11.3.0, changes from 11.2.4 to 11.3.0 are new in this desktop release</li>
-          <li>Updates MSCAE and GCP stencils</li>
-          <li>Enables ruler by default</li>
-        </ul>
-      </description>
-    </release>
+    <release version="12.4.0" date="2019-12-12" />
   </releases>
-  <content_rating type="oars-1.1"/>
+  <content_rating type="oars-1.1" />
 </component>
