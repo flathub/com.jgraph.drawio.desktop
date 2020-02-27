@@ -56,7 +56,8 @@ modules:
       - type: script
         dest-filename: start-drawio-desktop.sh
         commands:
-          - '/app/drawio-desktop/drawio --no-sandbox'
+          - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
+          - exec zypak-wrapper /app/drawio-desktop/drawio "$@"
       - type: file
         path: com.jgraph.drawio.desktop.appdata.xml
       - type: file
