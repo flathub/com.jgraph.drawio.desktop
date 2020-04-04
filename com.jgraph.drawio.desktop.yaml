@@ -6,7 +6,7 @@ sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
 base-version: '19.08'
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node10
+  - org.freedesktop.Sdk.Extension.node12
 separate-locales: false
 command: start-drawio-desktop
 finish-args:
@@ -29,10 +29,10 @@ modules:
   - name: drawio-desktop
     buildsystem: simple
     build-options:
-      append-path: '/usr/lib/sdk/node10/bin:/app/yarn/bin'
+      append-path: '/usr/lib/sdk/node12/bin:/app/yarn/bin'
       env:
         ELECTRON_CACHE: '/run/build/drawio-desktop/flatpak-node/electron-cache'
-        npm_config_nodedir: '/usr/lib/sdk/node10'
+        npm_config_nodedir: '/usr/lib/sdk/node12'
     build-commands:
       - 'HOME=$PWD yarn config --offline set yarn-offline-mirror $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror'
       - 'yarn --offline'
