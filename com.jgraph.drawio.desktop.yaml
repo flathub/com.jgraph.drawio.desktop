@@ -8,7 +8,7 @@ base-version: '19.08'
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node12
 separate-locales: false
-command: start-drawio-desktop
+command: start-drawio
 finish-args:
   - '--share=ipc'
   - '--socket=x11'
@@ -26,18 +26,18 @@ modules:
         url: https://github.com/yarnpkg/yarn/releases/download/v1.22.4/yarn-v1.22.4.tar.gz
         sha256: bc5316aa110b2f564a71a3d6e235be55b98714660870c5b6b2d2d3f12587fb58
 
-  - name: drawio-desktop
+  - name: drawio
     buildsystem: simple
     build-options:
       append-path: '/usr/lib/sdk/node12/bin:/app/yarn/bin'
       env:
-        ELECTRON_CACHE: '/run/build/drawio-desktop/flatpak-node/electron-cache'
+        ELECTRON_CACHE: '/run/build/drawio/flatpak-node/electron-cache'
         npm_config_nodedir: '/usr/lib/sdk/node12'
     build-commands:
       - 'HOME=$PWD yarn config --offline set yarn-offline-mirror $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror'
       - 'yarn --offline'
       - 'yarn run --offline release-linux --dir'
-      - 'cp -r dist/linux*-unpacked $FLATPAK_DEST/drawio-desktop'
+      - 'cp -r dist/linux*-unpacked $FLATPAK_DEST/drawio'
       - 'install -D -m 644 build/icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg'
       - 'icon_in=build/icon.svg;
         icon_out=$FLATPAK_ID.png;
@@ -45,7 +45,7 @@ modules:
         rsvg-convert $icon_in -w $size -h $size -a -f png -o $icon_out;
         install -D -m 644 -t $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps $icon_out;
         done;'
-      - 'install -D -m 755 start-drawio-desktop.sh $FLATPAK_DEST/bin/start-drawio-desktop'
+      - 'install -D -m 755 start-drawio.sh $FLATPAK_DEST/bin/start-drawio'
       - 'install -D -m 644 -t $FLATPAK_DEST/share/metainfo $FLATPAK_ID.appdata.xml'
       - 'install -D -m 644 -t $FLATPAK_DEST/share/applications $FLATPAK_ID.desktop'
     sources:
@@ -54,10 +54,10 @@ modules:
         commit: 5ec520bd52298c1461d2e246020e1092034769dc
       - generated-sources.json
       - type: script
-        dest-filename: start-drawio-desktop.sh
+        dest-filename: start-drawio.sh
         commands:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
-          - exec zypak-wrapper /app/drawio-desktop/drawio "$@"
+          - exec zypak-wrapper /app/drawio/drawio "$@"
       - type: file
         path: com.jgraph.drawio.desktop.appdata.xml
       - type: file
