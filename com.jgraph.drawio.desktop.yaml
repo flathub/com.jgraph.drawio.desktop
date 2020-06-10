@@ -46,7 +46,7 @@ modules:
         install -D -m 644 -t $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps $icon_out;
         done;'
       - 'install -D -m 755 start-drawio.sh $FLATPAK_DEST/bin/start-drawio'
-      - 'install -D -m 644 -t $FLATPAK_DEST/share/metainfo $FLATPAK_ID.appdata.xml'
+      - 'install -D -m 644 -t $FLATPAK_DEST/share/metainfo $FLATPAK_ID.metainfo.xml'
       - 'install -D -m 644 -t $FLATPAK_DEST/share/applications $FLATPAK_ID.desktop'
     sources:
       - type: git
@@ -60,6 +60,6 @@ modules:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
           - exec zypak-wrapper /app/drawio/drawio "$@"
       - type: file
-        path: com.jgraph.drawio.desktop.appdata.xml
+        path: com.jgraph.drawio.desktop.metainfo.xml
       - type: file
         path: com.jgraph.drawio.desktop.desktop
