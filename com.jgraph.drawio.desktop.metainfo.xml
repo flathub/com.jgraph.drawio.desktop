@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- Copyright 2018-2020 Flathub maintainers -->
-<component type="desktop">
+<component type="desktop-application">
   <id>com.jgraph.drawio.desktop</id>
   <launchable type="desktop-id">com.jgraph.drawio.desktop.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
@@ -44,7 +44,7 @@
   <developer_name>JGraph</developer_name>
   <update_contact>support@draw.io</update_contact>
   <releases>
-    <release version="12.9.3" date="2020-03-27" />
+    <release version="13.0.3" date="2020-04-29" />
   </releases>
   <content_rating type="oars-1.1" />
 </component>
