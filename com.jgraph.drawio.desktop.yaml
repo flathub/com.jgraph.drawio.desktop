@@ -31,7 +31,7 @@ modules:
     build-options:
       append-path: '/usr/lib/sdk/node12/bin:/app/yarn/bin'
       env:
-        ELECTRON_CACHE: '/run/build/drawio/flatpak-node/electron-cache'
+        electron_config_cache: '/run/build/drawio/flatpak-node/electron-cache'
         npm_config_nodedir: '/usr/lib/sdk/node12'
     build-commands:
       - 'HOME=$PWD yarn config --offline set yarn-offline-mirror $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror'
