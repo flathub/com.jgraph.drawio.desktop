@@ -1,9 +1,9 @@
 app-id: com.jgraph.drawio.desktop
 runtime: org.freedesktop.Platform
-runtime-version: '19.08'
+runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '19.08'
+base-version: '20.08'
 separate-locales: false
 command: start-drawio
 rename-desktop-file: drawio.desktop
@@ -28,8 +28,8 @@ modules:
       - desktop-file-edit --set-key=Exec --set-value="start-drawio %U" $FLATPAK_DEST/share/applications/drawio.desktop
     sources:
       - type: file
-        url: https://github.com/jgraph/drawio-desktop/releases/download/v13.6.2/draw.io-amd64-13.6.2.deb
-        sha256: b797657c4d70318096840f7c67a5307197f87fadc37dffbff50d38761eebb318
+        url: https://github.com/jgraph/drawio-desktop/releases/download/v13.7.9/draw.io-amd64-13.7.9.deb
+        sha256: b82e43d36a1a590302ebf5e3affa4ef25e8955fc13ab9835075c60f656f6a8d1
       - type: script
         dest-filename: start-drawio.sh
         commands:
