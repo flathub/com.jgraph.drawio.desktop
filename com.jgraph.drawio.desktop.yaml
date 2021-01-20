@@ -23,6 +23,7 @@ modules:
       - tar -xf data.tar.xz
       - cp -a opt/* usr/* $FLATPAK_DEST
       - rm -rf $FLATPAK_DEST/share/icons/hicolor/{720x720,1024x1024}/
+      - mv $FLATPAK_DEST/share/mime/packages/{drawio,$FLATPAK_ID}.xml
       - install -Dm755 start-drawio.sh $FLATPAK_DEST/bin/start-drawio
       - install -Dm644 -t $FLATPAK_DEST/share/metainfo $FLATPAK_ID.metainfo.xml
       - desktop-file-edit --set-key=Exec --set-value="start-drawio %U" $FLATPAK_DEST/share/applications/drawio.desktop
