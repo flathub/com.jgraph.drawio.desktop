@@ -29,8 +29,8 @@ modules:
       - desktop-file-edit --set-key=Exec --set-value="start-drawio %U" $FLATPAK_DEST/share/applications/drawio.desktop
     sources:
       - type: file
-        url: https://github.com/jgraph/drawio-desktop/releases/download/v14.4.2/draw.io-amd64-14.4.2.deb
-        sha256: f694ccf3567cf6be003d685a443237b0d4a8d0a406252967e8fe21568232a62a
+        url: https://github.com/jgraph/drawio-desktop/releases/download/v14.5.1/drawio-amd64-14.5.1.deb
+        sha256: 0cabdf1e9a051fc38672a9233b1b2d5368d2a776fe3d3f5e09a823278b899976
         x-checker-data:
           type: json
           url: https://api.github.com/repos/jgraph/drawio-desktop/releases/latest
