@@ -31,6 +31,11 @@ modules:
       - type: file
         url: https://github.com/jgraph/drawio-desktop/releases/download/v14.4.2/draw.io-amd64-14.4.2.deb
         sha256: f694ccf3567cf6be003d685a443237b0d4a8d0a406252967e8fe21568232a62a
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/jgraph/drawio-desktop/releases/latest
+          version-query: .tag_name | sub("^v"; "")
+          url-query: .assets[] | select(.name==drawio-amd64-\($version).deb | browser_download_url
       - type: script
         dest-filename: start-drawio.sh
         commands:
