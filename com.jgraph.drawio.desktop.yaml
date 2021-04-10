@@ -35,7 +35,7 @@ modules:
           type: json
           url: https://api.github.com/repos/jgraph/drawio-desktop/releases/latest
           version-query: .tag_name | sub("^v"; "")
-          url-query: .assets[] | select(.name==drawio-amd64-\($version).deb | browser_download_url
+          url-query: .assets[] | select(.name==drawio-amd64-\($version).deb | .browser_download_url
       - type: script
         dest-filename: start-drawio.sh
         commands:
