@@ -39,7 +39,7 @@ modules:
       - type: script
         dest-filename: start-drawio.sh
         commands:
-          - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
-          - exec zypak-wrapper /app/draw.io/drawio "$@"
+          - 'export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"'
+          - 'exec zypak-wrapper /app/drawio/drawio "$@"'
       - type: file
         path: com.jgraph.drawio.desktop.metainfo.xml
