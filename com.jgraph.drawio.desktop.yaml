@@ -4,10 +4,10 @@ runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
 base-version: '20.08'
-separate-locales: false
 command: start-drawio
-rename-desktop-file: drawio.desktop
-rename-icon: drawio
+separate-locales: false
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.node14
 finish-args:
   - --share=ipc
   - --socket=x11
@@ -16,30 +16,52 @@ finish-args:
 modules:
   - shared-modules/libsecret/libsecret.json
 
-  - name: drawio
+  - name: yarn
     buildsystem: simple
     build-commands:
-      - ar -x *.deb
-      - tar -xf data.tar.xz
-      - cp -a opt/* usr/* $FLATPAK_DEST
-      - rm -rf $FLATPAK_DEST/share/icons/hicolor/{720x720,1024x1024}/
-      - mv $FLATPAK_DEST/share/mime/packages/{drawio,$FLATPAK_ID}.xml
-      - install -Dm755 start-drawio.sh $FLATPAK_DEST/bin/start-drawio
-      - install -Dm644 -t $FLATPAK_DEST/share/metainfo $FLATPAK_ID.metainfo.xml
-      - desktop-file-edit --set-key=Exec --set-value="start-drawio %U" $FLATPAK_DEST/share/applications/drawio.desktop
+      - cp -a * /app
+    cleanup:
+      - '*'
     sources:
-      - type: file
-        url: https://github.com/jgraph/drawio-desktop/releases/download/v14.5.1/drawio-amd64-14.5.1.deb
-        sha256: 0cabdf1e9a051fc38672a9233b1b2d5368d2a776fe3d3f5e09a823278b899976
+      - type: archive
+        url: https://github.com/yarnpkg/yarn/releases/download/v1.22.10/yarn-v1.22.10.tar.gz
+        sha256: 7e433d4a77e2c79e6a7ae4866782608a8e8bcad3ec6783580577c59538381a6e
+
+  - name: drawio
+    buildsystem: simple
+    build-options:
+      append-path: /usr/lib/sdk/node14/bin:/app/yarn/bin
+      env:
+        XDG_CACHE_HOME: /run/build/drawio/flatpak-node/cache
+    build-commands:
+      - 'HOME=$PWD yarn config --offline set yarn-offline-mirror $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror'
+      - 'yarn --offline'
+      - 'yarn --offline run sync'
+      - '. flatpak-node/electron-builder-arch-args.sh; yarn --offline run release-linux --linux dir'
+      - 'cp -r dist/*unpacked $FLATPAK_DEST/lib/drawio'
+      - 'rm -f $FLATPAK_DEST/lib/drawio/chrome-sandbox'
+      - 'install -D -m 644 build/icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg'
+      - 'for size in 16 32 48 64 96 128 192 256 512; do
+        install -d $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps;
+        rsvg-convert -w $size -h $size -o $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps/$FLATPAK_ID.png build/icon.svg;
+        done'
+      - 'install -D -m 755 start-drawio.sh $FLATPAK_DEST/bin/start-drawio'
+      - 'install -D -m 644 -t $FLATPAK_DEST/share/applications $FLATPAK_ID.desktop'
+      - 'install -D -m 644 -t $FLATPAK_DEST/share/metainfo $FLATPAK_ID.metainfo.xml'
+    sources:
+      - type: git
+        url: https://github.com/jgraph/drawio-desktop.git
+        tag: v14.5.1
+        commit: d46750ee678365807cf8fac1424d6ef5f34a6d53
         x-checker-data:
-          type: json
-          url: https://api.github.com/repos/jgraph/drawio-desktop/releases/latest
-          version-query: .tag_name | sub("^v"; "")
-          url-query: .assets[] | select(.name=="drawio-amd64-\($version).deb") | .browser_download_url
+          type: git
+          tag-pattern: '^v([\d.]+)$'
+      - generated-sources.json
       - type: script
         dest-filename: start-drawio.sh
         commands:
-          - 'export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"'
-          - 'exec zypak-wrapper /app/drawio/drawio "$@"'
+          - 'exec env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/lib/drawio/drawio "$@"'
+      - type: file
+        path: com.jgraph.drawio.desktop.desktop
       - type: file
         path: com.jgraph.drawio.desktop.metainfo.xml
