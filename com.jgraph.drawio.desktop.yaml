@@ -13,6 +13,7 @@ finish-args:
   - --socket=x11
   - --share=network
   - --filesystem=home
+  - --device=dri
 modules:
   - shared-modules/libsecret/libsecret.json
 
