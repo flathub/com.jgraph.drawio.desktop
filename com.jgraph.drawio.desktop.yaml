@@ -35,33 +35,33 @@ modules:
       env:
         XDG_CACHE_HOME: /run/build/drawio/flatpak-node/cache
     build-commands:
-      - 'HOME=$PWD yarn config --offline set yarn-offline-mirror $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror'
-      - 'yarn --offline'
-      - 'yarn --offline run sync'
-      - '. flatpak-node/electron-builder-arch-args.sh; yarn --offline run release-linux --linux dir'
-      - 'cp -r dist/*unpacked $FLATPAK_DEST/lib/drawio'
-      - 'rm -f $FLATPAK_DEST/lib/drawio/chrome-sandbox'
-      - 'install -D -m 644 build/icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg'
-      - 'for size in 16 32 48 64 96 128 192 256 512; do
-        install -d $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps;
-        rsvg-convert -w $size -h $size -o $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps/$FLATPAK_ID.png build/icon.svg;
-        done'
-      - 'install -D -m 755 start-drawio.sh $FLATPAK_DEST/bin/start-drawio'
-      - 'install -D -m 644 -t $FLATPAK_DEST/share/applications $FLATPAK_ID.desktop'
-      - 'install -D -m 644 -t $FLATPAK_DEST/share/metainfo $FLATPAK_ID.metainfo.xml'
+      - HOME=$PWD yarn config --offline set yarn-offline-mirror $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror
+      - yarn --offline
+      - yarn --offline run sync
+      - . flatpak-node/electron-builder-arch-args.sh; yarn --offline run release-linux
+        --linux dir
+      - cp -r dist/*unpacked $FLATPAK_DEST/lib/drawio
+      - rm -f $FLATPAK_DEST/lib/drawio/chrome-sandbox
+      - install -D -m 644 build/icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
+      - for size in 16 32 48 64 96 128 192 256 512; do install -d $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps;
+        rsvg-convert -w $size -h $size -o $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps/$FLATPAK_ID.png
+        build/icon.svg; done
+      - install -D -m 755 start-drawio.sh $FLATPAK_DEST/bin/start-drawio
+      - install -D -m 644 -t $FLATPAK_DEST/share/applications $FLATPAK_ID.desktop
+      - install -D -m 644 -t $FLATPAK_DEST/share/metainfo $FLATPAK_ID.metainfo.xml
     sources:
       - type: git
         url: https://github.com/jgraph/drawio-desktop.git
-        tag: v14.5.1
+        tag: v14.6.11
         commit: d46750ee678365807cf8fac1424d6ef5f34a6d53
         x-checker-data:
           type: git
-          tag-pattern: '^v([\d.]+)$'
+          tag-pattern: ^v([\d.]+)$
       - generated-sources.json
       - type: script
         dest-filename: start-drawio.sh
         commands:
-          - 'exec env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/lib/drawio/drawio "$@"'
+          - exec env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/lib/drawio/drawio "$@"
       - type: file
         path: com.jgraph.drawio.desktop.desktop
       - type: file
