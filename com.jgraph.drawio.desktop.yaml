@@ -38,8 +38,7 @@ modules:
       - HOME=$PWD yarn config --offline set yarn-offline-mirror $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror
       - yarn --offline
       - yarn --offline run sync
-      - . flatpak-node/electron-builder-arch-args.sh; yarn --offline run release-linux
-        --linux dir
+      - . flatpak-node/electron-builder-arch-args.sh; yarn --offline run release-linux --linux dir
       - cp -r dist/*unpacked $FLATPAK_DEST/lib/drawio
       - rm -f $FLATPAK_DEST/lib/drawio/chrome-sandbox
       - install -D -m 644 build/icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
