@@ -54,8 +54,11 @@ modules:
         tag: v14.6.11
         commit: d46750ee678365807cf8fac1424d6ef5f34a6d53
         x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
+          type: json
+          url: https://api.github.com/repos/jgraph/drawio-desktop/releases/latest
+          tag-query: .tag_name
+          version-query: $tag | sub("^v"; "")
+          timestamp-query: .published_at
       - generated-sources.json
       - type: script
         dest-filename: start-drawio.sh
