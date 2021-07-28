@@ -15,8 +15,6 @@ finish-args:
   - --filesystem=home
   - --device=dri
 modules:
-  - shared-modules/libsecret/libsecret.json
-
   - name: yarn
     buildsystem: simple
     build-commands:
