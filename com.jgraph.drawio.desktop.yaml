@@ -8,6 +8,12 @@ command: start-drawio
 separate-locales: false
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node14
+build-options:
+  append-path: /usr/lib/sdk/node14/bin
+  cflags: -O2 -g
+  cxxflags: -O2 -g
+  env:
+    NPM_CONFIG_LOGLEVEL: info
 finish-args:
   - --share=ipc
   - --socket=x11
@@ -29,7 +35,7 @@ modules:
   - name: drawio
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/node14/bin:/app/yarn/bin
+      append-path: /app/yarn/bin
       env:
         XDG_CACHE_HOME: /run/build/drawio/flatpak-node/cache
     build-commands:
