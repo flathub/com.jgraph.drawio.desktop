@@ -18,13 +18,13 @@ modules:
   - name: yarn
     buildsystem: simple
     build-commands:
-      - cp -a * /app
+      - cp -a * $FLATPAK_DEST
     cleanup:
       - '*'
     sources:
       - type: archive
-        url: https://github.com/yarnpkg/yarn/releases/download/v1.22.10/yarn-v1.22.10.tar.gz
-        sha256: 7e433d4a77e2c79e6a7ae4866782608a8e8bcad3ec6783580577c59538381a6e
+        url: https://github.com/yarnpkg/yarn/releases/download/v1.22.11/yarn-v1.22.11.tar.gz
+        sha256: 2c320de14a6014f62d29c34fec78fdbb0bc71c9ccba48ed0668de452c1f5fe6c
 
   - name: drawio
     buildsystem: simple
