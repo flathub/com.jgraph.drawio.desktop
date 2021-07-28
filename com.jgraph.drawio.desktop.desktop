@@ -8,4 +8,4 @@ StartupWMClass=draw.io
 Comment=diagrams.net desktop
 MimeType=application/vnd.jgraph.mxfile;application/vnd.visio;
 Categories=Graphics;
-Keywords=chart;diagram;flowchart;process;uml;workflow;
+Keywords=chart;diagram;draw;flowchart;uml;
