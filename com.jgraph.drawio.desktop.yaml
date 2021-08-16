@@ -4,22 +4,22 @@ runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
 base-version: '20.08'
-command: start-drawio
-separate-locales: false
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node14
-build-options:
-  append-path: /usr/lib/sdk/node14/bin
-  cflags: -O2 -g
-  cxxflags: -O2 -g
-  env:
-    NPM_CONFIG_LOGLEVEL: info
+command: run.sh
+separate-locales: false
 finish-args:
   - --share=ipc
   - --socket=x11
   - --share=network
   - --filesystem=home
   - --device=dri
+build-options:
+  append-path: /usr/lib/sdk/node14/bin
+  cflags: -O2 -g
+  cxxflags: -O2 -g
+  env:
+    NPM_CONFIG_LOGLEVEL: info
 modules:
   - name: yarn
     buildsystem: simple
@@ -44,13 +44,12 @@ modules:
       - yarn --offline run sync
       - . flatpak-node/electron-builder-arch-args.sh; yarn --offline run release-linux
         --linux dir
-      - cp -r dist/*unpacked $FLATPAK_DEST/lib/drawio
-      - rm -f $FLATPAK_DEST/lib/drawio/chrome-sandbox
+      - cp -a dist/linux*unpacked $FLATPAK_DEST/main
       - install -D -m 644 build/icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
       - for size in 16 32 48 64 96 128 192 256 512; do install -d $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps;
         rsvg-convert -w $size -h $size -o $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps/$FLATPAK_ID.png
         build/icon.svg; done
-      - install -D -m 755 start-drawio.sh $FLATPAK_DEST/bin/start-drawio
+      - install -D -m 755 -t $FLATPAK_DEST/bin run.sh
       - install -D -m 644 -t $FLATPAK_DEST/share/applications $FLATPAK_ID.desktop
       - install -D -m 644 -t $FLATPAK_DEST/share/metainfo $FLATPAK_ID.metainfo.xml
     sources:
@@ -66,9 +65,9 @@ modules:
           timestamp-query: .published_at
       - generated-sources.json
       - type: script
-        dest-filename: start-drawio.sh
+        dest-filename: run.sh
         commands:
-          - exec env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/lib/drawio/drawio "$@"
+          - zypak-wrapper.sh /app/main/drawio "$@"
       - type: file
         path: com.jgraph.drawio.desktop.desktop
       - type: file

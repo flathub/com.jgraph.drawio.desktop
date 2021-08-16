@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=drawio
-Exec=start-drawio %U
+Exec=run.sh %U
 Terminal=false
 Type=Application
 Icon=com.jgraph.drawio.desktop
