@@ -42,7 +42,8 @@ modules:
       - HOME=$PWD yarn config --offline set yarn-offline-mirror $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror
       - yarn --offline
       - yarn --offline run sync
-      - . flatpak-node/electron-builder-arch-args.sh; yarn --offline run release-linux --linux dir
+      - . flatpak-node/electron-builder-arch-args.sh; yarn --offline run release-linux
+        --linux dir
       - cp -r dist/*unpacked $FLATPAK_DEST/lib/drawio
       - rm -f $FLATPAK_DEST/lib/drawio/chrome-sandbox
       - install -D -m 644 build/icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
@@ -55,8 +56,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/jgraph/drawio-desktop.git
-        tag: v14.6.13
-        commit: 37334031fd778e5449a74704a6dd07a9659edb65
+        tag: v14.9.6
+        commit: 2e479a311d22bddb6b171bfa3f6d1dab43e24d89
         x-checker-data:
           type: json
           url: https://api.github.com/repos/jgraph/drawio-desktop/releases/latest
