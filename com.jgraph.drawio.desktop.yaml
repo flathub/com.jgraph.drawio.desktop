@@ -21,21 +21,9 @@ build-options:
   env:
     NPM_CONFIG_LOGLEVEL: info
 modules:
-  - name: yarn
-    buildsystem: simple
-    build-commands:
-      - cp -a * $FLATPAK_DEST
-    cleanup:
-      - '*'
-    sources:
-      - type: archive
-        url: https://github.com/yarnpkg/yarn/releases/download/v1.22.11/yarn-v1.22.11.tar.gz
-        sha256: 2c320de14a6014f62d29c34fec78fdbb0bc71c9ccba48ed0668de452c1f5fe6c
-
   - name: drawio
     buildsystem: simple
     build-options:
-      append-path: /app/yarn/bin
       env:
         XDG_CACHE_HOME: /run/build/drawio/flatpak-node/cache
     build-commands:
