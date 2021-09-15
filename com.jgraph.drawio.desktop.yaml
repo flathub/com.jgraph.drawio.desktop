@@ -10,8 +10,9 @@ command: run.sh
 separate-locales: false
 finish-args:
   - --share=ipc
-  - --socket=x11
   - --share=network
+  - --socket=wayland
+  - --socket=x11
   - --filesystem=home
   - --device=dri
 build-options:
