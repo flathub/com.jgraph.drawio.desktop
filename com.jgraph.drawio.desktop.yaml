@@ -57,7 +57,7 @@ modules:
       - type: script
         dest-filename: run.sh
         commands:
-          - if [ ! -e $XDG_RUNTIME_DIR/$WAYLAND_DISPLAY ]; then
+          - if [ ! $XDG_SESSION_TYPE = "wayland" ]; then
           - zypak-wrapper.sh /app/main/drawio "$@"
           - else
           - zypak-wrapper.sh /app/main/drawio --enable-features=UseOzonePlatform -ozone-platform=wayland "$@"
