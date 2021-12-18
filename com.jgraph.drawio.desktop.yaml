@@ -41,6 +41,7 @@ modules:
       - install -D -m 755 -t $FLATPAK_DEST/bin run.sh
       - install -D -m 644 -t $FLATPAK_DEST/share/applications $FLATPAK_ID.desktop
       - install -D -m 644 -t $FLATPAK_DEST/share/metainfo $FLATPAK_ID.metainfo.xml
+      - install -D -m 644 -t $FLATPAK_DEST/share/mime/packages $FLATPAK_ID-mime.xml
     sources:
       - type: git
         url: https://github.com/jgraph/drawio-desktop.git
@@ -61,3 +62,5 @@ modules:
         path: com.jgraph.drawio.desktop.desktop
       - type: file
         path: com.jgraph.drawio.desktop.metainfo.xml
+      - type: file
+        path: com.jgraph.drawio.desktop-mime.xml
