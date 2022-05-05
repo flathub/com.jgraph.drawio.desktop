@@ -45,8 +45,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/jgraph/drawio-desktop.git
-        tag: v18.0.0
-        commit: 26a5d3718f4c3e361fbc3273e5fa4ca2dd9abb8b
+        tag: v18.0.1
+        commit: 95b15ce6f56b7e9df6646b39e7d683a5ae1d36eb
         x-checker-data:
           type: json
           url: https://api.github.com/repos/jgraph/drawio-desktop/releases/latest
@@ -59,7 +59,8 @@ modules:
         commands:
           - export TMPDIR="${XDG_RUNTIME_DIR}/app/${FLATPAK_ID}"
           - if [ "${XDG_SESSION_TYPE}" == "wayland" ]; then
-          - zypak-wrapper /app/main/drawio --enable-features=UseOzonePlatform --ozone-platform=wayland "$@"
+          - zypak-wrapper /app/main/drawio --enable-features=UseOzonePlatform --ozone-platform=wayland
+            "$@"
           - else
           - zypak-wrapper /app/main/drawio "$@"
           - fi
