@@ -48,16 +48,16 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v18.2.0/SHASUMS256.txt",
-        "sha256": "5e3387fbafeab2cb9d9613827cf4cf558091845b3d8f9ac7de2c557484ae2656",
-        "dest-filename": "SHASUMS256.txt-18.2.0",
+        "url": "https://github.com/electron/electron/releases/download/v18.2.3/SHASUMS256.txt",
+        "sha256": "8c56c526f36cf0e5e76bc9cef060e912b89a813cd21440bbe1e858c3ec38a10d",
+        "dest-filename": "SHASUMS256.txt-18.2.3",
         "dest": "flatpak-node/cache/electron"
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v18.2.0/electron-v18.2.0-linux-arm64.zip",
-        "sha256": "680b1588ad98b2e2ddefa7082f8db890f0a0ad4f6f1dd53ed5136554c8482ffc",
-        "dest-filename": "electron-v18.2.0-linux-arm64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v18.2.3/electron-v18.2.3-linux-arm64.zip",
+        "sha256": "6147b090400d324c6aa57f3e2158e7a29d55243ced52bc17b24fbd47460159f3",
+        "dest-filename": "electron-v18.2.3-linux-arm64.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "aarch64"
@@ -65,9 +65,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v18.2.0/electron-v18.2.0-linux-armv7l.zip",
-        "sha256": "bc4b885341280375c1f676f3520489cc04c91f9beb72f2de5a71f8904991bbf3",
-        "dest-filename": "electron-v18.2.0-linux-armv7l.zip",
+        "url": "https://github.com/electron/electron/releases/download/v18.2.3/electron-v18.2.3-linux-armv7l.zip",
+        "sha256": "f9269ccb99b982a319d81c1a52c2311c0379995a0efea51fe1b0161588110a92",
+        "dest-filename": "electron-v18.2.3-linux-armv7l.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "arm"
@@ -75,9 +75,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v18.2.0/electron-v18.2.0-linux-ia32.zip",
-        "sha256": "030382498d4b044325f4b3121d125f8a411f6250968833b6bf2ad9a78e38cc39",
-        "dest-filename": "electron-v18.2.0-linux-ia32.zip",
+        "url": "https://github.com/electron/electron/releases/download/v18.2.3/electron-v18.2.3-linux-ia32.zip",
+        "sha256": "eb5dedd55b03a2c022e243619888c28d2288df736e14e493a7b2fb7ad68f9f15",
+        "dest-filename": "electron-v18.2.3-linux-ia32.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "i386"
@@ -85,9 +85,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v18.2.0/electron-v18.2.0-linux-x64.zip",
-        "sha256": "05deaddeb5c949fa2757920cd2af36fc3f1d9c4b7ac39cab3c5feff5ebf6bc50",
-        "dest-filename": "electron-v18.2.0-linux-x64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v18.2.3/electron-v18.2.3-linux-x64.zip",
+        "sha256": "dec8ae528e4ebb224b5b1fb1f186c4d4afa0812137f267823a064dc5c4afbeca",
+        "dest-filename": "electron-v18.2.3-linux-x64.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "x86_64"
@@ -1964,9 +1964,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/electron/-/electron-18.2.0.tgz#a0cbf8d5d1a1e9d1c195d86cd6937e721ed60fec",
-        "sha512": "00df8229a973039edb7aebee23dd0f5605bfca3eb38f0eeba5bd61f05bc8c01277b680c2df1d0f95fcdbce1e0e9dd79c6e3722ee94a0fcd0399e03a4f34e1621",
-        "dest-filename": "electron-18.2.0.tgz",
+        "url": "https://registry.yarnpkg.com/electron/-/electron-18.2.3.tgz#36bcb8f71e41631e6b11179eeff291c8228bfd6a",
+        "sha512": "0c9597d3784244a4ec72c7d7c665b8826805bac7a8a7e83e9b89a5ecd7ce31f6a7903f2e632af65f28b7522d368a72fda993a56cb31e2d50aeea32822acf29ff",
+        "dest-filename": "electron-18.2.3.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -3449,10 +3449,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv18.2.0electron-v18.2.0-linux-arm64.zip\"",
-            "ln -s \"../electron-v18.2.0-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv18.2.0electron-v18.2.0-linux-arm64.zip/electron-v18.2.0-linux-arm64.zip\"",
-            "mkdir -p \"829051a119b150bf50202e505694cd024fd10dd5107d116d66dc07e15324a278\"",
-            "ln -s \"../electron-v18.2.0-linux-arm64.zip\" \"829051a119b150bf50202e505694cd024fd10dd5107d116d66dc07e15324a278/electron-v18.2.0-linux-arm64.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv18.2.3electron-v18.2.3-linux-arm64.zip\"",
+            "ln -s \"../electron-v18.2.3-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv18.2.3electron-v18.2.3-linux-arm64.zip/electron-v18.2.3-linux-arm64.zip\"",
+            "mkdir -p \"cd78ef3dfc88ad4297e7abdd05bd45a883f35f73861306b187ad22f5d061a2fb\"",
+            "ln -s \"../electron-v18.2.3-linux-arm64.zip\" \"cd78ef3dfc88ad4297e7abdd05bd45a883f35f73861306b187ad22f5d061a2fb/electron-v18.2.3-linux-arm64.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -3462,10 +3462,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv18.2.0electron-v18.2.0-linux-armv7l.zip\"",
-            "ln -s \"../electron-v18.2.0-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv18.2.0electron-v18.2.0-linux-armv7l.zip/electron-v18.2.0-linux-armv7l.zip\"",
-            "mkdir -p \"829051a119b150bf50202e505694cd024fd10dd5107d116d66dc07e15324a278\"",
-            "ln -s \"../electron-v18.2.0-linux-armv7l.zip\" \"829051a119b150bf50202e505694cd024fd10dd5107d116d66dc07e15324a278/electron-v18.2.0-linux-armv7l.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv18.2.3electron-v18.2.3-linux-armv7l.zip\"",
+            "ln -s \"../electron-v18.2.3-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv18.2.3electron-v18.2.3-linux-armv7l.zip/electron-v18.2.3-linux-armv7l.zip\"",
+            "mkdir -p \"cd78ef3dfc88ad4297e7abdd05bd45a883f35f73861306b187ad22f5d061a2fb\"",
+            "ln -s \"../electron-v18.2.3-linux-armv7l.zip\" \"cd78ef3dfc88ad4297e7abdd05bd45a883f35f73861306b187ad22f5d061a2fb/electron-v18.2.3-linux-armv7l.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -3475,10 +3475,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv18.2.0electron-v18.2.0-linux-ia32.zip\"",
-            "ln -s \"../electron-v18.2.0-linux-ia32.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv18.2.0electron-v18.2.0-linux-ia32.zip/electron-v18.2.0-linux-ia32.zip\"",
-            "mkdir -p \"829051a119b150bf50202e505694cd024fd10dd5107d116d66dc07e15324a278\"",
-            "ln -s \"../electron-v18.2.0-linux-ia32.zip\" \"829051a119b150bf50202e505694cd024fd10dd5107d116d66dc07e15324a278/electron-v18.2.0-linux-ia32.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv18.2.3electron-v18.2.3-linux-ia32.zip\"",
+            "ln -s \"../electron-v18.2.3-linux-ia32.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv18.2.3electron-v18.2.3-linux-ia32.zip/electron-v18.2.3-linux-ia32.zip\"",
+            "mkdir -p \"cd78ef3dfc88ad4297e7abdd05bd45a883f35f73861306b187ad22f5d061a2fb\"",
+            "ln -s \"../electron-v18.2.3-linux-ia32.zip\" \"cd78ef3dfc88ad4297e7abdd05bd45a883f35f73861306b187ad22f5d061a2fb/electron-v18.2.3-linux-ia32.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -3488,10 +3488,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv18.2.0electron-v18.2.0-linux-x64.zip\"",
-            "ln -s \"../electron-v18.2.0-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv18.2.0electron-v18.2.0-linux-x64.zip/electron-v18.2.0-linux-x64.zip\"",
-            "mkdir -p \"829051a119b150bf50202e505694cd024fd10dd5107d116d66dc07e15324a278\"",
-            "ln -s \"../electron-v18.2.0-linux-x64.zip\" \"829051a119b150bf50202e505694cd024fd10dd5107d116d66dc07e15324a278/electron-v18.2.0-linux-x64.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv18.2.3electron-v18.2.3-linux-x64.zip\"",
+            "ln -s \"../electron-v18.2.3-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv18.2.3electron-v18.2.3-linux-x64.zip/electron-v18.2.3-linux-x64.zip\"",
+            "mkdir -p \"cd78ef3dfc88ad4297e7abdd05bd45a883f35f73861306b187ad22f5d061a2fb\"",
+            "ln -s \"../electron-v18.2.3-linux-x64.zip\" \"cd78ef3dfc88ad4297e7abdd05bd45a883f35f73861306b187ad22f5d061a2fb/electron-v18.2.3-linux-x64.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
