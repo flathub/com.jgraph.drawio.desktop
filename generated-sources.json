@@ -1250,9 +1250,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/@types/node/-/node-17.0.38.tgz#f8bb07c371ccb1903f3752872c89f44006132947",
-        "sha512": "e6363d46157b734678272d3d1be3480d3b026791b42f99fe67ea7e63bb795491ccdf46e0c334a356d95c071a808fee8bfecc0896fb4e4b3afcac193f68dc95da",
-        "dest-filename": "@types-node-17.0.38.tgz",
+        "url": "https://registry.yarnpkg.com/@types/node/-/node-17.0.40.tgz#76ee88ae03650de8064a6cf75b8d95f9f4a16090",
+        "sha512": "517741c4d1aa4ccb66ee10b087d1ed9dc1552eb5e8a80de8256df48fa5d6a79047ff0bb799579ac68edcab96de9c5741c37e070775c34f64d13c8eeb5d9fa60e",
+        "dest-filename": "@types-node-17.0.40.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
