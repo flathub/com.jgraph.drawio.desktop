@@ -45,6 +45,8 @@
   <update_contact>support@draw.io</update_contact>
   <releases>
     <release version="20.6.2" date="2022-12-10"/>
+    <release version="20.6.1" date="2022-12-08"/>
+    <release version="20.6.0" date="2022-12-02"/>
     <release version="20.3.0" date="2022-09-09"/>
     <release version="20.2.8" date="2022-09-02"/>
     <release version="20.2.3" date="2022-08-05"/>
