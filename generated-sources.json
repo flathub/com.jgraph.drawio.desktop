@@ -1,16 +1,16 @@
 [
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v25.8.3/SHASUMS256.txt",
-        "sha256": "5ac2f501c897e69d138537de102c723c2b79d75f2ea25a6b128d99c5e770de91",
-        "dest-filename": "SHASUMS256.txt-25.8.3",
+        "url": "https://github.com/electron/electron/releases/download/v25.8.4/SHASUMS256.txt",
+        "sha256": "ac781d4827740987304387e3db6619c0d5eb5a2f1c7a6f6faf922a7aedb71206",
+        "dest-filename": "SHASUMS256.txt-25.8.4",
         "dest": "flatpak-node/cache/electron"
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v25.8.3/electron-v25.8.3-linux-arm64.zip",
-        "sha256": "9f4d9875f157e6c62aea30aa636a50f5453b36b146229ea375854abde9063273",
-        "dest-filename": "electron-v25.8.3-linux-arm64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v25.8.4/electron-v25.8.4-linux-arm64.zip",
+        "sha256": "fbb6e06417b1741b94d59a6de5dcf3262bfb3fc98cffbcad475296c42d1cbe94",
+        "dest-filename": "electron-v25.8.4-linux-arm64.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "aarch64"
@@ -18,9 +18,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v25.8.3/electron-v25.8.3-linux-armv7l.zip",
-        "sha256": "510662bf2744115db32e4411e0b0b190d3c156b5e622be3e35c286f5be371909",
-        "dest-filename": "electron-v25.8.3-linux-armv7l.zip",
+        "url": "https://github.com/electron/electron/releases/download/v25.8.4/electron-v25.8.4-linux-armv7l.zip",
+        "sha256": "6301e6fde3e7c8149a5eca84c3817ba9ad3ffcb72e79318a355f025d7d3f8408",
+        "dest-filename": "electron-v25.8.4-linux-armv7l.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "arm"
@@ -28,9 +28,9 @@
     },
     {
         "type": "file",
-        "url": "https://github.com/electron/electron/releases/download/v25.8.3/electron-v25.8.3-linux-x64.zip",
-        "sha256": "63a90d6aa5e8d6be0179630165cf578e41d4889b874c59ac790235fc500b3948",
-        "dest-filename": "electron-v25.8.3-linux-x64.zip",
+        "url": "https://github.com/electron/electron/releases/download/v25.8.4/electron-v25.8.4-linux-x64.zip",
+        "sha256": "0cbbcaf90f3dc79dedec97d073ffe954530316523479c31b11781a141f8a87f6",
+        "dest-filename": "electron-v25.8.4-linux-x64.zip",
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
             "x86_64"
@@ -178,16 +178,16 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/@types/node/-/node-18.18.0.tgz#bd19d5133a6e5e2d0152ec079ac27c120e7f1763",
-        "sha512": "df10385f7d601d3d45d65dfc0130c82fd1a944b7705619c4142f148a4bf964b957013c2b098c8fabb6561f1cf173727fdf44948b08984fe6d07b4fd7bca9566f",
-        "dest-filename": "@types-node-18.18.0.tgz",
+        "url": "https://registry.yarnpkg.com/@types/node/-/node-18.18.3.tgz#e5188135fc2909b46530c798ef49be65083be3fd",
+        "sha512": "d0e55f1aea5397734116bf3e897a5f67c351ee37c53be3f543e20efead306e8d36c1890fe60cb7ea98688de616a4b43a58032397e55f9aa524d986d47e9d22ac",
+        "dest-filename": "@types-node-18.18.3.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/@types/node/-/node-20.7.1.tgz#06d732ead0bd5ad978ef0ea9cbdeb24dc8717514",
-        "sha512": "2d3f8e217a69da48f81364bfa7dd4131ef958065f6fa57cef974e97d7861f9b0a4d8b910b47652b9bf1ec0504c18fe42972b0f8d30c56b8b0c23c4379f84f4c2",
-        "dest-filename": "@types-node-20.7.1.tgz",
+        "url": "https://registry.yarnpkg.com/@types/node/-/node-20.8.2.tgz#d76fb80d87d0d8abfe334fc6d292e83e5524efc4",
+        "sha512": "56fc9cb1cf4541dc21c44df2dc3cde231b8425b5860ec9ebc6f3000f34c317f95c751f7f2be01021e02085342c1eda2d83fab48f75843984bf8d0812756b9edf",
+        "dest-filename": "@types-node-20.8.2.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -780,9 +780,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/electron/-/electron-25.8.3.tgz#f92426042eecf3286db40fd84df9179bba168c12",
-        "sha512": "05d71322b85021fe9882c8a1097621dc380aa1bb4b68d7056f50790bfe5eb9ea71c5743baa64d60ba5a03549be227b4b38510340ef76eabbe6da785175237e37",
-        "dest-filename": "electron-25.8.3.tgz",
+        "url": "https://registry.yarnpkg.com/electron/-/electron-25.8.4.tgz#b50877aac7d96323920437baf309ad86382cb455",
+        "sha512": "854612dd119d69ae84d545a7cde1a7b1db0160e820c0c320e161b1346bc0a16b6646bafa27506c8c55bfc91ab85ac24725c7b61ddcd05edcf83865d5eb25022e",
+        "dest-filename": "electron-25.8.4.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -1982,10 +1982,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv25.8.3electron-v25.8.3-linux-arm64.zip\"",
-            "ln -s \"../electron-v25.8.3-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv25.8.3electron-v25.8.3-linux-arm64.zip/electron-v25.8.3-linux-arm64.zip\"",
-            "mkdir -p \"cdf90ccfeb19cadedd569e43dd6f73f2ee251daad3b84f37f0abdec59bf45dbf\"",
-            "ln -s \"../electron-v25.8.3-linux-arm64.zip\" \"cdf90ccfeb19cadedd569e43dd6f73f2ee251daad3b84f37f0abdec59bf45dbf/electron-v25.8.3-linux-arm64.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv25.8.4electron-v25.8.4-linux-arm64.zip\"",
+            "ln -s \"../electron-v25.8.4-linux-arm64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv25.8.4electron-v25.8.4-linux-arm64.zip/electron-v25.8.4-linux-arm64.zip\"",
+            "mkdir -p \"c67684a9bcb5a72ca80cb2db3404511ecec22c253e6060c9a9c4b25dfc7c1ed8\"",
+            "ln -s \"../electron-v25.8.4-linux-arm64.zip\" \"c67684a9bcb5a72ca80cb2db3404511ecec22c253e6060c9a9c4b25dfc7c1ed8/electron-v25.8.4-linux-arm64.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -1995,10 +1995,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv25.8.3electron-v25.8.3-linux-armv7l.zip\"",
-            "ln -s \"../electron-v25.8.3-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv25.8.3electron-v25.8.3-linux-armv7l.zip/electron-v25.8.3-linux-armv7l.zip\"",
-            "mkdir -p \"cdf90ccfeb19cadedd569e43dd6f73f2ee251daad3b84f37f0abdec59bf45dbf\"",
-            "ln -s \"../electron-v25.8.3-linux-armv7l.zip\" \"cdf90ccfeb19cadedd569e43dd6f73f2ee251daad3b84f37f0abdec59bf45dbf/electron-v25.8.3-linux-armv7l.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv25.8.4electron-v25.8.4-linux-armv7l.zip\"",
+            "ln -s \"../electron-v25.8.4-linux-armv7l.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv25.8.4electron-v25.8.4-linux-armv7l.zip/electron-v25.8.4-linux-armv7l.zip\"",
+            "mkdir -p \"c67684a9bcb5a72ca80cb2db3404511ecec22c253e6060c9a9c4b25dfc7c1ed8\"",
+            "ln -s \"../electron-v25.8.4-linux-armv7l.zip\" \"c67684a9bcb5a72ca80cb2db3404511ecec22c253e6060c9a9c4b25dfc7c1ed8/electron-v25.8.4-linux-armv7l.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
@@ -2008,10 +2008,10 @@
     {
         "type": "shell",
         "commands": [
-            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv25.8.3electron-v25.8.3-linux-x64.zip\"",
-            "ln -s \"../electron-v25.8.3-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv25.8.3electron-v25.8.3-linux-x64.zip/electron-v25.8.3-linux-x64.zip\"",
-            "mkdir -p \"cdf90ccfeb19cadedd569e43dd6f73f2ee251daad3b84f37f0abdec59bf45dbf\"",
-            "ln -s \"../electron-v25.8.3-linux-x64.zip\" \"cdf90ccfeb19cadedd569e43dd6f73f2ee251daad3b84f37f0abdec59bf45dbf/electron-v25.8.3-linux-x64.zip\""
+            "mkdir -p \"httpsgithub.comelectronelectronreleasesdownloadv25.8.4electron-v25.8.4-linux-x64.zip\"",
+            "ln -s \"../electron-v25.8.4-linux-x64.zip\" \"httpsgithub.comelectronelectronreleasesdownloadv25.8.4electron-v25.8.4-linux-x64.zip/electron-v25.8.4-linux-x64.zip\"",
+            "mkdir -p \"c67684a9bcb5a72ca80cb2db3404511ecec22c253e6060c9a9c4b25dfc7c1ed8\"",
+            "ln -s \"../electron-v25.8.4-linux-x64.zip\" \"c67684a9bcb5a72ca80cb2db3404511ecec22c253e6060c9a9c4b25dfc7c1ed8/electron-v25.8.4-linux-x64.zip\""
         ],
         "dest": "flatpak-node/cache/electron",
         "only-arches": [
