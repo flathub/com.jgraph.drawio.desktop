@@ -808,9 +808,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/electron-log/-/electron-log-5.0.2.tgz#6dae26cb7fce9feaa4605d575e02fee75da7b085",
-        "sha512": "bb3517a54199e6525e084227e07af1b7acd05a2511bbe11b1724ee97463cd61b9ce94aef59720e331e16c4d75a1896163e4f582d6af3d9d41fdfcf7832864a5f",
-        "dest-filename": "electron-log-5.0.2.tgz",
+        "url": "https://registry.yarnpkg.com/electron-log/-/electron-log-5.0.3.tgz#972e088df24bf09dca980067df48e4eec0e2ec82",
+        "sha512": "8d4800b918dfa420fdb661f517a7dbd7de58b057ccfc392a9192e115ea3454002cb5a9ed9f5d5bc66831eb7b84e8a1bf2658c71bbb089203364048c38a6248d2",
+        "dest-filename": "electron-log-5.0.3.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
