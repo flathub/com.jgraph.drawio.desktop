@@ -5,7 +5,7 @@ sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
 base-version: '23.08'
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node18
+  - org.freedesktop.Sdk.Extension.node20
 command: run.sh
 separate-locales: false
 finish-args:
@@ -17,7 +17,7 @@ finish-args:
   - --device=dri
   - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
 build-options:
-  append-path: /usr/lib/sdk/node18/bin
+  append-path: /usr/lib/sdk/node20/bin
   cflags: -O2 -g
   cxxflags: -O2 -g
   env:
@@ -46,8 +46,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/jgraph/drawio-desktop.git
-        tag: v24.2.5
-        commit: 7f56b589917ac27a27e99dd3b4a98f34af70eba8
+        tag: v24.4.6
+        commit: 8557fc4431fe933fe30ec1a931b85207eca04fd9
         x-checker-data:
           type: json
           url: https://api.github.com/repos/jgraph/drawio-desktop/releases/latest
