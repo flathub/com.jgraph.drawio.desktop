@@ -40,6 +40,7 @@
   <developer_name>JGraph</developer_name>
   <update_contact>support@draw.io</update_contact>
   <releases>
+    <release version="24.4.8" date="2024-05-24"/>
     <release version="24.4.7" date="2024-05-23"/>
     <release version="24.4.6" date="2024-05-22"/>
     <release version="24.2.5" date="2024-04-12"/>
