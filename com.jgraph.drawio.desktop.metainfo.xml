@@ -41,8 +41,7 @@
   <update_contact>support@draw.io</update_contact>
   <releases>
     <release version="24.5.1" date="2024-06-07">
-      <description></description>
-    </release>
+    <release version="24.4.13" date="2024-05-31">
     <release version="24.4.8" date="2024-05-24"/>
     <release version="24.4.7" date="2024-05-23"/>
     <release version="24.4.6" date="2024-05-22"/>
