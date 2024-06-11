@@ -46,8 +46,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/jgraph/drawio-desktop.git
-        tag: v24.5.1
-        commit: 2892c8635c83b94f60cd192c6e48c377dfdd124d
+        tag: v24.5.3
+        commit: d47cf25e8ff04e463a3c05125118c064f27d94ab
         x-checker-data:
           type: json
           url: https://api.github.com/repos/jgraph/drawio-desktop/releases/latest
