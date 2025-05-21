@@ -59,7 +59,7 @@ modules:
         dest-filename: run.sh
         commands:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
-          - exec zypak-wrapper /app/main/drawio --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations
+          - exec zypak-wrapper /app/main/drawio --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations --enable-wayland-ime
             "$@"
       - type: file
         path: com.jgraph.drawio.desktop.desktop
