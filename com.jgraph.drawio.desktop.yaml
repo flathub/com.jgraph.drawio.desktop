@@ -46,8 +46,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/jgraph/drawio-desktop.git
-        tag: v26.1.1
-        commit: 620aa902d87e0a47b6fc6eb9aed60d0198ed5603
+        tag: v27.0.9
+        commit: 899992c6cec3b3ba6d820a8867a6bd9ada98b18f
         x-checker-data:
           type: json
           url: https://api.github.com/repos/jgraph/drawio-desktop/releases/latest
@@ -59,8 +59,8 @@ modules:
         dest-filename: run.sh
         commands:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
-          - exec zypak-wrapper /app/main/drawio --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations --enable-wayland-ime
-            "$@"
+          - exec zypak-wrapper /app/main/drawio --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations
+            --enable-wayland-ime "$@"
       - type: file
         path: com.jgraph.drawio.desktop.desktop
       - type: file
