@@ -40,6 +40,17 @@
   <developer_name>JGraph</developer_name>
   <update_contact>support@draw.io</update_contact>
   <releases>
+    <release version="28.2.8" date="2025-10-23"/>
+    <release version="28.2.7" date="2025-10-22"/>
+    <release version="28.2.5" date="2025-10-08"/>
+    <release version="28.1.2" date="2025-08-29"/>
+    <release version="28.0.6" date="2025-07-22"/>
+    <release version="28.0.4" date="2025-07-12"/>
+    <release version="27.0.9" date="2025-05-26"/>
+    <release version="27.0.5" date="2025-05-13"/>
+    <release version="27.0.2" date="2025-05-09"/>
+    <release version="26.2.15" date="2025-04-26"/>
+    <release version="26.2.2" date="2025-04-01"/>
     <release version="26.1.1" date="2025-03-16"/>
     <release version="26.0.16" date="2025-02-24"/>
     <release version="26.0.15" date="2025-02-21"/>
