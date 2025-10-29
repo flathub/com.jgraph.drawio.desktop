@@ -1,11 +1,11 @@
 app-id: com.jgraph.drawio.desktop
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '24.08'
+base-version: '25.08'
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node20
+  - org.freedesktop.Sdk.Extension.node22
 command: run.sh
 separate-locales: false
 finish-args:
@@ -17,7 +17,7 @@ finish-args:
   - --device=dri
   - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
 build-options:
-  append-path: /usr/lib/sdk/node20/bin
+  append-path: /usr/lib/sdk/node22/bin
   cflags: -O2 -g
   cxxflags: -O2 -g
   env:
@@ -46,14 +46,17 @@ modules:
     sources:
       - type: git
         url: https://github.com/jgraph/drawio-desktop.git
-        tag: v26.1.1
-        commit: 620aa902d87e0a47b6fc6eb9aed60d0198ed5603
+        tag: v28.2.8
+        commit: 5cee270f98bea533c973bf9b07fa12da8f0c43a9
         x-checker-data:
           type: json
           url: https://api.github.com/repos/jgraph/drawio-desktop/releases/latest
           tag-query: .tag_name
           version-query: $tag | sub("^v"; "")
           timestamp-query: .published_at
+      - type: shell
+        commands:
+          - sed -i '/"\*\*\/\*"/a\    "!flatpak-node",' electron-builder-linux-mac.json
       - generated-sources.json
       - type: script
         dest-filename: run.sh
