@@ -34,6 +34,7 @@
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/jgraph/drawio-desktop/master/screenshot.png</image>
+      <caption>The main draw.io window</caption>
     </screenshot>
   </screenshots>
   <url type="homepage">https://about.draw.io</url>
