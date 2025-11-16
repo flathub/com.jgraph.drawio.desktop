@@ -374,9 +374,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-26.1.0.tgz#4f72e6e461d33367f129142d9fa78b4a4c7a3ae0",
-        "sha512": "7715841888134cf0fc3a260df17ea7dcf577d7e0c5c2f3fda725c2143b15e5fcadea0fb44cc654557ac246b48f8f4f97fe98413da779b0d3cb2ef0510d50cf69",
-        "dest-filename": "app-builder-lib-26.1.0.tgz",
+        "url": "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-26.2.0.tgz#ceae8dbc06367660abd908dc8b0f114ccc09c582",
+        "sha512": "669ba98a6871c889a6b90608b03c254c3e0407bb31dd2d6a647fef3614118ad305a7d0ffdb233eebbe4deb164f177940a1056fba58dc38b8497e288ec8858e46",
+        "dest-filename": "app-builder-lib-26.2.0.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -836,9 +836,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/dmg-builder/-/dmg-builder-26.1.0.tgz#efe2a02ff3b9fa67fdaf5c256de04a1df1b0a4e3",
-        "sha512": "d1e5c1eea5fd607890da8f3710c802f00e9543b05f0853fccf196152daadbeacb59c454865af176ce01c2223fc9dee7c461c0b60a5762c271f3753889971445a",
-        "dest-filename": "dmg-builder-26.1.0.tgz",
+        "url": "https://registry.yarnpkg.com/dmg-builder/-/dmg-builder-26.2.0.tgz#6346c4e5c0dc065a9f418f1f1ecc04886b495707",
+        "sha512": "04bec731d3c7a2cf5aec4d514625e053cbf603ca0390ff6b59ad1b6155f4aba89b0e20a3109864288bd693a82a0567407bf4b864dddd8a74a20d11f0bf2077a4",
+        "dest-filename": "dmg-builder-26.2.0.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -892,9 +892,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/electron-builder/-/electron-builder-26.1.0.tgz#48a5fbfc149d25f9d729a79ee6dc3688b77c1c81",
-        "sha512": "76fcbdb0e0d613bbaacfb97af1ca29800b4ed842ae99d90ba82828a0d5a5edb4858ebb9b3268dfda1552ea2c12adc6fb84b1cbd363942c13cda78e5a78601ca4",
-        "dest-filename": "electron-builder-26.1.0.tgz",
+        "url": "https://registry.yarnpkg.com/electron-builder/-/electron-builder-26.2.0.tgz#75569ef629e52645e5db9ec44f394a4b55524ee0",
+        "sha512": "7994f3a1536b92c277b11b3eb73e70cc1a61b68a56d5481470bbf6c704a6898dd65c5ebb055e0ba0a75a1fb624b90338bafe1ab1884a126817dcc290c447f67f",
+        "dest-filename": "electron-builder-26.2.0.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
@@ -948,9 +948,9 @@
     },
     {
         "type": "file",
-        "url": "https://registry.yarnpkg.com/electron-updater/-/electron-updater-6.7.0.tgz#8dd471de27193a5192bda322c66cdbff0add4123",
-        "sha512": "8fc7a30590a4a7992fbf533124da106928cdbc46ebfd91d27907709b48db6468159be67a131a91a6a13ca11c43b0369cc507e4ee5f2194102796ae2a024db07f",
-        "dest-filename": "electron-updater-6.7.0.tgz",
+        "url": "https://registry.yarnpkg.com/electron-updater/-/electron-updater-6.7.1.tgz#3fc1fc26527db8f0533655a105ab8be28879d199",
+        "sha512": "096a9ef08e9ed16289961eb3ad7261ca88e9586ed3e99bb14ec33dd4a0c4bd1153d50ceb29b6d1bd08704b2b8be879c87dd4693d59c6cf946ac63bf739c3f569",
+        "dest-filename": "electron-updater-6.7.1.tgz",
         "dest": "flatpak-node/yarn-mirror"
     },
     {
