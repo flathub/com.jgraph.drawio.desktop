@@ -35,7 +35,8 @@ modules:
       - cp -rL flatpak-node/cache/node-gyp flatpak-node/cache/node-gyp-resolved
       - rm -rf flatpak-node/cache/node-gyp
       - mv flatpak-node/cache/node-gyp-resolved flatpak-node/cache/node-gyp
-      - . flatpak-node/electron-builder-arch-args.sh; yarn --offline run release-linux --linux dir
+      - . flatpak-node/electron-builder-arch-args.sh; yarn --offline run release-linux
+        --linux dir
       - cp -a dist/linux*unpacked $FLATPAK_DEST/main
       - install -D -m 644 build/icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
       - for size in 16 32 48 64 96 128 192 256 512; do install -d $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps;
@@ -48,8 +49,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/jgraph/drawio-desktop.git
-        tag: v29.0.3
-        commit: 90cf2870b38800ac9019d1d3a7256008cfcaaaa4
+        tag: v29.3.0
+        commit: dba9311572682a8ea766eac5e5e0b90ab37c4927
         x-checker-data:
           type: json
           url: https://api.github.com/repos/jgraph/drawio-desktop/releases/latest
@@ -61,8 +62,8 @@ modules:
         dest-filename: run.sh
         commands:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
-          - exec zypak-wrapper /app/main/drawio --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations --enable-wayland-ime
-            "$@"
+          - exec zypak-wrapper /app/main/drawio --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations
+            --enable-wayland-ime "$@"
       - type: file
         path: com.jgraph.drawio.desktop.desktop
       - type: file
