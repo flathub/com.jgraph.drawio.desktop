@@ -1,4 +1,3 @@
 {
-    "disable-external-data-checker": true,
-    "end-of-life": "This application is no longer maintained."
+    "disable-external-data-checker": true
 }
