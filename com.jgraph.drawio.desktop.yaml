@@ -1,9 +1,9 @@
 app-id: com.jgraph.drawio.desktop
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '25.08'
+base-version: '26.08'
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node24
 command: run.sh
@@ -50,8 +50,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/jgraph/drawio-desktop.git
-        tag: v32.6.10
-        commit: 9c63aeacb79c395ee156b1f88deff23a2bbe25c4
+        tag: v32.7.4
+        commit: 5e8406789216bed8f043bc503f4927b4034d7a71
         x-checker-data:
           type: json
           url: https://api.github.com/repos/jgraph/drawio-desktop/releases/latest
